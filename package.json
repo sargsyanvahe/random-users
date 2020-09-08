@@ -1,5 +1,6 @@
 {
   "name": "random-users",
+  "homepage": "https://8eni.github.com/my-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
