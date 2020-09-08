@@ -1,8 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import { openInfoModal } from "../../redux/actions/usersActions";
 
-const ListItem = ({user}) => {
+const ListItem = ({ user, openModal }) => {
     return (
-        <tr>
+        <tr style={{cursor: 'pointer'}} onClick={() => openModal(user)}>
             <td>{user.name.first}</td>
             <td>{user.name.last}</td>
             <td>{user.nat}</td>
@@ -10,4 +12,6 @@ const ListItem = ({user}) => {
     )
 }
 
-export default ListItem;
+const mapDispatchToProps = dispatch => ({ openModal: user => dispatch(openInfoModal(user)) })
+
+export default connect(null, mapDispatchToProps)(ListItem);

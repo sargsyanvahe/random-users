@@ -1,0 +1,33 @@
+.modal-container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: rgba(153, 153, 153, 0.48);
+    overflow: hidden;
+}
+
+.modal{
+    display: flex !important;
+    padding: 40px 40px 20px 40px;
+    width: max-content !important;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.modal img {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.modal button{
+    align-items: flex-end;
+    margin-left: auto !important;
+}

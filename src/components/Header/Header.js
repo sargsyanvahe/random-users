@@ -8,7 +8,7 @@ import './Header.css'
 
 const Header = (props) => {
 
-    const { location: { pathname }, history } = props;
+    const { location: { pathname }, history, onSearchChange, searchValue } = props;
 
     const onHandlePageChange = () => {
         history.push(pathname === '/main' ? '/edit' : 'main')
@@ -19,15 +19,15 @@ const Header = (props) => {
             <button onClick={onHandlePageChange} className="ui button">
                 {`Go to ${pathname === '/main' ? 'Edit' : 'Main'} Page`}
             </button>
-            <div className="ui search">
+            {pathname === '/main' && <div className="ui search">
                 <div className="ui icon input">
-                    <input onChange={({ target }) => props.onSearchChange(target.value)}
+                    <input onChange={({ target }) => onSearchChange(target.value)}
                            className="prompt" type="text"
-                           value={props.searchValue}
+                           value={searchValue}
                            placeholder="Search"/>
                     <i className="search icon"/>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 };

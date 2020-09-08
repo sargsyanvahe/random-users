@@ -6,6 +6,14 @@
     margin: 0 !important;
 }
 
+.main-list tr {
+    transition: .3s;
+}
+
+.main-list tr:hover {
+    background: #cecece;
+}
+
 .nat-container{
     height: 50px;
     display: flex;
