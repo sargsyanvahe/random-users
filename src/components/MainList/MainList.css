@@ -1,0 +1,18 @@
+.main-list{
+    margin-top: 80px;
+}
+
+.main-list > .table{
+    margin: 0 !important;
+}
+
+.nat-container{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loader-container{
+    position: fixed !important;
+}

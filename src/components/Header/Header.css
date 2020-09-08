@@ -1,0 +1,25 @@
+.header{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    border-bottom: solid 1px gray;
+    z-index: 2;
+}
+
+.header > .search{
+    left: 50%;
+    width: max-content;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.header > .button{
+    left: 10%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
